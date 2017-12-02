@@ -3,6 +3,7 @@
 #include <opencv2/highgui/highgui.hpp>
 
 using namespace cv;
+using namespace std;
 
 int main(int argc, char** argv) {
     VideoCapture cap(0);
@@ -35,6 +36,7 @@ int main(int argc, char** argv) {
         }
         drawContours(image, squares, -1, color);
         cv::imshow("image", image);
+        cv::waitKey(1);
     }
 
     return 0;
