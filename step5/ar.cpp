@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
     Mat intrinsics, distortion;
     fs["Camera_Matrix"] >> intrinsics;
     fs["Distortion_Coefficients"] >> distortion;
-    
+
     if (intrinsics.rows != 3 || intrinsics.cols != 3 || distortion.rows != 5 || distortion.cols != 1) {
         cout << "Run calibration (in ../calibrate/) first!" << endl;
         return 1;
